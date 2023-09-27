@@ -12,6 +12,8 @@ const SeriesCard = ({ series }) => {
 
   const checkCurrentMovie = bookmarkMovies.find((series) => series.id == id);
 
+  console.log("This is current movie", checkCurrentMovie?"hello":"ss")
+
   return (
     <>
       <div className="relative flex-shrink-0 w-full max-w-[450px]">
@@ -24,8 +26,8 @@ const SeriesCard = ({ series }) => {
                 removeMovie(series);
               }
             }}
-            className={`text-[20px] absolute top-[10px] right-[11px] text-white ${
-              checkCurrentMovie && "text-red-400"
+            className={`text-[20px] absolute top-[10px] right-[11px]  ${
+              checkCurrentMovie ? "text-red-400":"text-white"
             } cursor-pointer`}/>
         </div>
         <Link to={`/movies/${id}`}>
