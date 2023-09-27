@@ -34,10 +34,9 @@ const MovieCard = ({ movies }) => {
                 removeMovie(movies);
               }
             }}
-            className={`text-[20px] absolute top-[10px] right-[11px] text-white ${
-              checkCurrentMovie && "text-red-400"
-            } cursor-pointer`}
-          />
+            className={`text-[20px] absolute top-[10px] right-[11px]  ${
+              checkCurrentMovie ? "text-red-400":"text-white"
+            } cursor-pointer`}/>
         </div>
         <Link
           to={`/movies/${id}?mediaType=${media_type}`}

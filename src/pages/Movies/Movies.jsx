@@ -25,7 +25,7 @@ const Movies = () => {
   return (
     <>
     <h1 className="text-white font-bold text-[45px] px-5 py-10">Movies</h1>
-      <div className="px-[20px] grid grid-cols-4 gap-4">
+      <div className="px-[20px] grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {movies.map((movie, id) => (
           <MovieCard movies={movie} />
         ))}
