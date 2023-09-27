@@ -7,7 +7,7 @@ import Bookmark from './pages/Bookmark/Bookmark'
 import MovieDetails from './pages/Movies/MovieDetails/MovieDetails'
 import SeriesDetails from './pages/TvSeries/SeriesDetails/SeriesDetails'
 import Nav from './Components/Nav/Nav'
-import Search from './pages/Search/search'
+import Search from './pages/Search/Search'
 import '@splidejs/react-splide/css';
 import Movies from './pages/Movies/Movies'
 import Series from './pages/TvSeries/Series'
