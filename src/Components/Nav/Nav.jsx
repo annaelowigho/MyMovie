@@ -18,10 +18,7 @@ const Nav = () => {
         <Link to="/">
           <MdMovie className="text-[60px] text-[#ff4549] " />
         </Link>
-        <div className="flex items-center justify-between lg:flex-col gap-2 md:gap-8 text-[#56698f] text-[40px]">
-          <Link to="">
-            <AiFillAppstore className="hover:text-white" />
-          </Link>
+        <div className="flex items-center justify-between lg:flex-col gap-2 md:gap-8 lg:gap-10 text-[#56698f] text-[40px] lg:pb-[50px]">
           <Link to="/movies">
             <MdLocalMovies className="hover:text-white" />
           </Link>

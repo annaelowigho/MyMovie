@@ -4,7 +4,7 @@ import { getImage } from "../lib/constant";
 import { BsFillBookmarkFill } from "react-icons/bs";
 import { bookmarkContext } from "../context/BookmarkContext";
 
-const MovieCard = ({ movies }) => {
+const MovieCard = ({ movies, isMovie }) => {
   const { addMovies, removeMovie, bookmarkMovies } =
     useContext(bookmarkContext);
   const {
@@ -19,6 +19,7 @@ const MovieCard = ({ movies }) => {
     original_name,
     id,
   } = movies;
+
 
   const checkCurrentMovie = bookmarkMovies.find((movie) => movie.id == id);
 
@@ -39,7 +40,7 @@ const MovieCard = ({ movies }) => {
             } cursor-pointer`}/>
         </div>
         <Link
-          to={`/movies/${id}?mediaType=${media_type}`}
+          to={`/movies/${id}?mediaType=${isMovie ? "movie" :media_type}`}
           className="text-white pb-[20px] cursor-pointer relative"
         >
           <img
