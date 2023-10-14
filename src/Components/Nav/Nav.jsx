@@ -3,7 +3,7 @@ import { AiFillAppstore } from "react-icons/ai";
 import { MdLocalMovies, MdMovie } from "react-icons/md";
 import { PiTelevision } from "react-icons/pi";
 import { BsFillBookmarkFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { bookmarkContext } from "../context/BookmarkContext";
 
 
@@ -19,14 +19,14 @@ const Nav = () => {
           <MdMovie className="text-[60px] text-[#ff4549] " />
         </Link>
         <div className="flex items-center justify-between lg:flex-col gap-2 md:gap-8 lg:gap-10 text-[#56698f] text-[40px] lg:pb-[50px]">
-          <Link to="/movies">
-            <MdLocalMovies className="hover:text-white" />
+          <Link className="hover:text-white focus:text-white" to="/movies">
+            <MdLocalMovies />
           </Link>
-          <Link to="/series">
-            <PiTelevision className="hover:text-white" />
+          <Link className="hover:text-white focus:text-white" to="/series">
+            <PiTelevision  />
           </Link>
-          <Link className="relative" to="/bookmark">
-            <BsFillBookmarkFill className="hover:text-white text-[30px]" />
+          <Link className="relative hover:text-white focus:text-white" to="/bookmark">
+            <BsFillBookmarkFill className="text-[30px]" />
             {bookmarkMovies.length > 0 && (
               <span className="absolute top-[-10%] right-0 grid place-items-center h-5 w-5 rounded-full bg-red-400 text-[10px] z-10 text-white">
                 {" "}
