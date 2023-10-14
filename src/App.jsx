@@ -18,7 +18,7 @@ function App() {
   // This is a change
 
   return (
-    <div className='flex flex-col lg:flex-row w-full'>
+    <div className='flex flex-col lg:flex-row lg:items-stretch w-full'>
       
       <Nav/>
      <div className='flex-1'>

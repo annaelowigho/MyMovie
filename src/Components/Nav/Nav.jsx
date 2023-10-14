@@ -12,7 +12,7 @@ const Nav = () => {
   return (
     <>
       <div
-        className="sticky flex items-center justify-between h-[100px] bg-[#161d2f] 
+        className="sticky left-0 top-0 flex items-center justify-between h-[100px] bg-[#161d2f] 
       lg:h-[95vh] lg:gap-[100px] p-5 md:m-[20px] lg:flex-col md:rounded-md lg:rounded-[20px] cursor-pointer"
       >
         <Link to="/">

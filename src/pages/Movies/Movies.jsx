@@ -8,7 +8,7 @@ import { AiFillForward, AiFillBackward } from "react-icons/ai";
 const API_KEY = import.meta.env.VITE_API_KEY;
 
 const Movies = () => {
-  const [movies, setMovies] = useState([]);
+ 
 
   const [currentPage, setCurrentPage] = useState(1);
   const { data, loading, isError } = useFetch(
@@ -16,6 +16,8 @@ const Movies = () => {
     `page=${currentPage}`,
     currentPage
   );
+
+  console.log(data)
   const ref = useRef();
 
   const totalPages = data.total_pages;
@@ -34,11 +36,13 @@ const Movies = () => {
     end = totalPages;
   }
 
+  console.log(start)
+
   return (
     <>
     <h1 className="text-white font-bold text-[45px] px-5 py-10">Movies</h1>
       <div className="px-[20px] grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {movies.map((movie, id) => (
+        {data.results?.map((movie, id) => (
           <MovieCard isMovie={true} movies={movie} />
         ))}
       </div>
