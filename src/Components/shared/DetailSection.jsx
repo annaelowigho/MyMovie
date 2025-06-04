@@ -19,7 +19,7 @@ const DetailSection = ({ movie }) => {
             Genre: {genres?.map((genre) => (
               <span className='text-green-500 font-normal'>{genre.name}</span>
             ))}
-          </div>
+          </div> 
         </div>
       </div>
     </>

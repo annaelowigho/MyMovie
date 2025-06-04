@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import useFetch from "../../hooks/useFetch";
-
+ 
 const API_KEY = import.meta.env.VITE_API_KEY;
 console.log(API_KEY);
 
@@ -43,7 +43,7 @@ const Homepage = () => {
 
   return (
     <>
-      <div className="flex flex-col w-full ">
+      <div className="flex flex-col w-full overflow-hidden">
         <div className="flex flex-col items-start">
           <form
             onSubmit={handleSumit}
